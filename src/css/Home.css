@@ -1,0 +1,204 @@
+/* Importar fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: #ffffff;
+    background-color: #2563eb;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 5px 0px 0px 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Container principal */
+.home-container {
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.home-content {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 60px 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 1px solid #f1f5f9;
+}
+
+/* Seção do logo */
+.logo-section {
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.app-logo {
+    width: 200px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.app-subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* Seção de boas-vindas */
+.welcome-section {
+    margin-bottom: 20px;
+}
+
+.welcome-title {
+    font-size: 1.8rem;
+    color: #1f2937;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.welcome-description {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Seção de ação */
+.action-section {
+    margin-top: 12px;
+}
+
+.config-button {
+    background: linear-gradient(135deg, #2563EB, #1e40af);
+    color: white;
+    border: none;
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 10px 30px rgba(37, 99, 235, 0.4),
+        0 4px 12px rgba(37, 99, 235, 0.2);
+    min-width: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.config-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.config-button:hover::before {
+    left: 100%;
+}
+
+.config-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 15px 40px rgba(37, 99, 235, 0.5),
+        0 6px 20px rgba(37, 99, 235, 0.3);
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+.config-button:active {
+    transform: translateY(-1px);
+    box-shadow: 
+        0 8px 25px rgba(37, 99, 235, 0.4),
+        0 3px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 0;
+    }
+    
+    .home-content {
+        padding: 40px 30px;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .app-logo {
+        width: 150px;
+        height: 60px;
+    }
+    
+    .welcome-title {
+        font-size: 1.5rem;
+    }
+    
+    .welcome-description {
+        font-size: 1rem;
+    }
+    
+    .config-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content {
+        padding: 30px 20px;
+    }
+    
+    .app-logo {
+        width: 120px;
+        height: 48px;
+    }
+    
+    .welcome-title {
+        font-size: 1.3rem;
+    }
+}
