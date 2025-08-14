@@ -112,11 +112,23 @@ const Card = () => {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
 
-    // Aplicar cor do tema
+    // Aplicar cor do tema e evitar jumps de viewport ao abrir teclado
     useEffect(() => {
         if (cardData && cardData.themeColor) {
             document.documentElement.style.setProperty('--theme-color', cardData.themeColor);
         }
+        // Ajuste de unidade vh custom para iOS/Android quando teclado abre
+        const setRealVh = () => {
+            const realVh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+            document.documentElement.style.setProperty('--real-vh', `${realVh}px`);
+        };
+        setRealVh();
+        window.addEventListener('resize', setRealVh);
+        window.visualViewport && window.visualViewport.addEventListener('resize', setRealVh);
+        return () => {
+            window.removeEventListener('resize', setRealVh);
+            window.visualViewport && window.visualViewport.removeEventListener('resize', setRealVh);
+        };
     }, [cardData]);
 
     // Se o cartão não está configurado, mostrar CardWelcome

@@ -16,14 +16,15 @@
 /* Container principal */
 .card-container {
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: var(--real-vh, 100dvh);
     background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     padding: 20px;
-}
+    overflow-x: hidden;
+ }
 
 .card-content {
     background: #ffffff;
@@ -118,6 +119,7 @@
     text-decoration: none;
     color: inherit;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .link-item:hover {
