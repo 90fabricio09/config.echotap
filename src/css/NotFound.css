@@ -11,6 +11,7 @@
 /* Container principal */
 .notfound-container {
     min-height: 100vh;
+    min-height: 100dvh;
     background: linear-gradient(135deg, #2563EB 0%, #1e40af 50%, #1e3a8a 100%);
     display: flex;
     align-items: center;
