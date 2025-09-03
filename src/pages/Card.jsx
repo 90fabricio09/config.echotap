@@ -94,15 +94,96 @@ const Card = () => {
     // Ícones para cada tipo de link
     const getIconClass = (iconType) => {
         const icons = {
-            website: 'bi-globe',
+            // Redes Sociais
             instagram: 'bi-instagram',
             linkedin: 'bi-linkedin',
             twitter: 'bi-twitter',
             youtube: 'bi-youtube',
             tiktok: 'bi-tiktok',
+            facebook: 'bi-facebook',
+            snapchat: 'bi-snapchat',
+            pinterest: 'bi-pinterest',
+            discord: 'bi-discord',
+            telegram: 'bi-telegram',
+            
+            // Comunicação
             whatsapp: 'bi-whatsapp',
             email: 'bi-envelope',
-            phone: 'bi-telephone'
+            phone: 'bi-telephone',
+            message: 'bi-chat-dots',
+            chat: 'bi-chat',
+            
+            // Negócios e Profissional
+            website: 'bi-globe',
+            portfolio: 'bi-briefcase',
+            resume: 'bi-file-earmark-person',
+            business: 'bi-building',
+            briefcase: 'bi-briefcase',
+            building: 'bi-building',
+            shop: 'bi-shop',
+            store: 'bi-shop-window',
+            
+            // Tecnologia
+            github: 'bi-github',
+            google: 'bi-search',
+            code: 'bi-code-slash',
+            laptop: 'bi-laptop',
+            mobile: 'bi-phone',
+            
+            // Entretenimento e Mídia
+            spotify: 'bi-music-note-beamed',
+            netflix: 'bi-play-circle',
+            twitch: 'bi-broadcast',
+            podcast: 'bi-mic',
+            music: 'bi-music-note-beamed',
+            video: 'bi-camera-video',
+            camera: 'bi-camera',
+            mic: 'bi-mic',
+            
+            // Serviços e Utilitários
+            calendar: 'bi-calendar-event',
+            clock: 'bi-clock',
+            location: 'bi-geo-alt',
+            map: 'bi-map',
+            navigation: 'bi-compass',
+            car: 'bi-car-front',
+            plane: 'bi-airplane',
+            train: 'bi-train-front',
+            
+            // Comida e Restaurante
+            menu: 'bi-list-ul',
+            restaurant: 'bi-cup-hot',
+            food: 'bi-egg-fried',
+            coffee: 'bi-cup-hot',
+            pizza: 'bi-circle-fill',
+            burger: 'bi-circle-fill',
+            utensils: 'bi-utensils',
+            
+            // Saúde e Bem-estar
+            heart: 'bi-heart',
+            star: 'bi-star',
+            fitness: 'bi-heart-pulse',
+            gym: 'bi-dumbbell',
+            yoga: 'bi-person-standing',
+            meditation: 'bi-sun',
+            
+            // Educação e Aprendizado
+            book: 'bi-book',
+            graduation: 'bi-mortarboard',
+            school: 'bi-building',
+            university: 'bi-building',
+            course: 'bi-journal-text',
+            certificate: 'bi-award',
+            
+            // Outros
+            gift: 'bi-gift',
+            ticket: 'bi-ticket-perforated',
+            event: 'bi-calendar-event',
+            party: 'bi-balloon',
+            game: 'bi-controller',
+            sport: 'bi-trophy',
+            art: 'bi-palette',
+            design: 'bi-brush'
         };
         return icons[iconType] || 'bi-link-45deg';
     };

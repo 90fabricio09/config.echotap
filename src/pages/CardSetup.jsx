@@ -98,15 +98,96 @@ const CardSetup = () => {
 
     // Opções de ícones para links
     const iconOptions = [
-        { value: 'website', label: 'Website' },
+        // Redes Sociais
         { value: 'instagram', label: 'Instagram' },
         { value: 'linkedin', label: 'LinkedIn' },
         { value: 'twitter', label: 'Twitter' },
         { value: 'youtube', label: 'YouTube' },
         { value: 'tiktok', label: 'TikTok' },
+        { value: 'facebook', label: 'Facebook' },
+        { value: 'snapchat', label: 'Snapchat' },
+        { value: 'pinterest', label: 'Pinterest' },
+        { value: 'discord', label: 'Discord' },
+        { value: 'telegram', label: 'Telegram' },
+        
+        // Comunicação
         { value: 'whatsapp', label: 'WhatsApp' },
         { value: 'email', label: 'Email' },
-        { value: 'phone', label: 'Telefone' }
+        { value: 'phone', label: 'Telefone' },
+        { value: 'message', label: 'Mensagem' },
+        { value: 'chat', label: 'Chat' },
+        
+        // Negócios e Profissional
+        { value: 'website', label: 'Website' },
+        { value: 'portfolio', label: 'Portfólio' },
+        { value: 'resume', label: 'Currículo' },
+        { value: 'business', label: 'Negócio' },
+        { value: 'briefcase', label: 'Maleta' },
+        { value: 'building', label: 'Empresa' },
+        { value: 'shop', label: 'Loja' },
+        { value: 'store', label: 'Comércio' },
+        
+        // Tecnologia
+        { value: 'github', label: 'GitHub' },
+        { value: 'google', label: 'Google' },
+        { value: 'code', label: 'Código' },
+        { value: 'laptop', label: 'Laptop' },
+        { value: 'mobile', label: 'Mobile' },
+        
+        // Entretenimento e Mídia
+        { value: 'spotify', label: 'Spotify' },
+        { value: 'netflix', label: 'Netflix' },
+        { value: 'twitch', label: 'Twitch' },
+        { value: 'podcast', label: 'Podcast' },
+        { value: 'music', label: 'Música' },
+        { value: 'video', label: 'Vídeo' },
+        { value: 'camera', label: 'Câmera' },
+        { value: 'mic', label: 'Microfone' },
+        
+        // Serviços e Utilitários
+        { value: 'calendar', label: 'Calendário' },
+        { value: 'clock', label: 'Relógio' },
+        { value: 'location', label: 'Localização' },
+        { value: 'map', label: 'Mapa' },
+        { value: 'navigation', label: 'Navegação' },
+        { value: 'car', label: 'Carro' },
+        { value: 'plane', label: 'Avião' },
+        { value: 'train', label: 'Trem' },
+        
+        // Comida e Restaurante
+        { value: 'menu', label: 'Cardápio' },
+        { value: 'restaurant', label: 'Restaurante' },
+        { value: 'food', label: 'Comida' },
+        { value: 'coffee', label: 'Café' },
+        { value: 'pizza', label: 'Pizza' },
+        { value: 'burger', label: 'Hambúrguer' },
+        { value: 'utensils', label: 'Talheres' },
+        
+        // Saúde e Bem-estar
+        { value: 'heart', label: 'Coração' },
+        { value: 'star', label: 'Estrela' },
+        { value: 'fitness', label: 'Fitness' },
+        { value: 'gym', label: 'Academia' },
+        { value: 'yoga', label: 'Yoga' },
+        { value: 'meditation', label: 'Meditação' },
+        
+        // Educação e Aprendizado
+        { value: 'book', label: 'Livro' },
+        { value: 'graduation', label: 'Graduação' },
+        { value: 'school', label: 'Escola' },
+        { value: 'university', label: 'Universidade' },
+        { value: 'course', label: 'Curso' },
+        { value: 'certificate', label: 'Certificado' },
+        
+        // Outros
+        { value: 'gift', label: 'Presente' },
+        { value: 'ticket', label: 'Ingresso' },
+        { value: 'event', label: 'Evento' },
+        { value: 'party', label: 'Festa' },
+        { value: 'game', label: 'Jogo' },
+        { value: 'sport', label: 'Esporte' },
+        { value: 'art', label: 'Arte' },
+        { value: 'design', label: 'Design' }
     ];
 
     const handleInputChange = (field, value) => {
@@ -220,15 +301,96 @@ const CardSetup = () => {
     // Função para obter ícone do preview
     const getPreviewIcon = (iconType) => {
         const iconMap = {
-            website: 'globe',
+            // Redes Sociais
             instagram: 'instagram',
             linkedin: 'linkedin',
             twitter: 'twitter',
             youtube: 'youtube',
             tiktok: 'tiktok',
+            facebook: 'facebook',
+            snapchat: 'snapchat',
+            pinterest: 'pinterest',
+            discord: 'discord',
+            telegram: 'telegram',
+            
+            // Comunicação
             whatsapp: 'whatsapp',
             email: 'envelope',
-            phone: 'telephone'
+            phone: 'telephone',
+            message: 'chat-dots',
+            chat: 'chat',
+            
+            // Negócios e Profissional
+            website: 'globe',
+            portfolio: 'briefcase',
+            resume: 'file-earmark-person',
+            business: 'building',
+            briefcase: 'briefcase',
+            building: 'building',
+            shop: 'shop',
+            store: 'shop-window',
+            
+            // Tecnologia
+            github: 'github',
+            google: 'search',
+            code: 'code-slash',
+            laptop: 'laptop',
+            mobile: 'phone',
+            
+            // Entretenimento e Mídia
+            spotify: 'music-note-beamed',
+            netflix: 'play-circle',
+            twitch: 'broadcast',
+            podcast: 'mic',
+            music: 'music-note-beamed',
+            video: 'camera-video',
+            camera: 'camera',
+            mic: 'mic',
+            
+            // Serviços e Utilitários
+            calendar: 'calendar-event',
+            clock: 'clock',
+            location: 'geo-alt',
+            map: 'map',
+            navigation: 'compass',
+            car: 'car-front',
+            plane: 'airplane',
+            train: 'train-front',
+            
+            // Comida e Restaurante
+            menu: 'list-ul',
+            restaurant: 'cup-hot',
+            food: 'egg-fried',
+            coffee: 'cup-hot',
+            pizza: 'circle-fill',
+            burger: 'circle-fill',
+            utensils: 'utensils',
+            
+            // Saúde e Bem-estar
+            heart: 'heart',
+            star: 'star',
+            fitness: 'heart-pulse',
+            gym: 'dumbbell',
+            yoga: 'person-standing',
+            meditation: 'sun',
+            
+            // Educação e Aprendizado
+            book: 'book',
+            graduation: 'mortarboard',
+            school: 'building',
+            university: 'building',
+            course: 'journal-text',
+            certificate: 'award',
+            
+            // Outros
+            gift: 'gift',
+            ticket: 'ticket-perforated',
+            event: 'calendar-event',
+            party: 'balloon',
+            game: 'controller',
+            sport: 'trophy',
+            art: 'palette',
+            design: 'brush'
         };
         return iconMap[iconType] || 'link-45deg';
     };
