@@ -223,6 +223,35 @@ const CardSetup = () => {
         }
     };
 
+    // Funções para reordenar links
+    const moveLinkUp = (linkId) => {
+        setFormData(prev => {
+            const links = [...prev.links];
+            const currentIndex = links.findIndex(link => link.id === linkId);
+            
+            if (currentIndex > 0) {
+                // Trocar com o link anterior
+                [links[currentIndex], links[currentIndex - 1]] = [links[currentIndex - 1], links[currentIndex]];
+            }
+            
+            return { ...prev, links };
+        });
+    };
+
+    const moveLinkDown = (linkId) => {
+        setFormData(prev => {
+            const links = [...prev.links];
+            const currentIndex = links.findIndex(link => link.id === linkId);
+            
+            if (currentIndex < links.length - 1) {
+                // Trocar com o link seguinte
+                [links[currentIndex], links[currentIndex + 1]] = [links[currentIndex + 1], links[currentIndex]];
+            }
+            
+            return { ...prev, links };
+        });
+    };
+
     const handlePhotoUpload = async (e) => {
         const file = e.target.files[0];
         if (!file) return;
@@ -606,19 +635,45 @@ const CardSetup = () => {
                             Links
                         </h2>
 
-                        {formData.links.map((link) => (
+                        {formData.links.map((link, index) => (
                             <div key={link.id} className="link-group">
                                 <div className="link-header">
-                                    <span className="link-number">Link {link.id}</span>
-                                    {formData.links.length > 1 && (
+                                    <div className="link-info">
+                                        <span className="link-number">Link {index + 1}</span>
+                                        <span className="link-position">Posição {index + 1}</span>
+                                    </div>
+                                    <div className="link-controls">
+                                        {formData.links.length > 1 && (
+                                            <>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => moveLinkUp(link.id)}
+                                                    className="move-link-btn"
+                                                    disabled={index === 0}
+                                                    title="Mover para cima"
+                                                >
+                                                    <i className="bi bi-arrow-up"></i>
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => moveLinkDown(link.id)}
+                                                    className="move-link-btn"
+                                                    disabled={index === formData.links.length - 1}
+                                                    title="Mover para baixo"
+                                                >
+                                                    <i className="bi bi-arrow-down"></i>
+                                                </button>
+                                            </>
+                                        )}
                                         <button
                                             type="button"
                                             onClick={() => removeLink(link.id)}
                                             className="remove-link-btn"
+                                            title="Remover link"
                                         >
                                             <i className="bi bi-trash"></i>
                                         </button>
-                                    )}
+                                    </div>
                                 </div>
 
                                 <div className="link-fields">
