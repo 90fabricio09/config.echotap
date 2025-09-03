@@ -125,15 +125,15 @@ const Card = () => {
             
             // Tecnologia
             github: 'bi-github',
-            google: 'bi-search',
+            google: 'bi-google',
             code: 'bi-code-slash',
             laptop: 'bi-laptop',
             mobile: 'bi-phone',
             
             // Entretenimento e Mídia
-            spotify: 'bi-music-note-beamed',
+            spotify: 'bi-spotify',
             netflix: 'bi-play-circle',
-            twitch: 'bi-broadcast',
+            twitch: 'bi-twitch',
             podcast: 'bi-mic',
             music: 'bi-music-note-beamed',
             video: 'bi-camera-video',
@@ -155,8 +155,8 @@ const Card = () => {
             restaurant: 'bi-cup-hot',
             food: 'bi-egg-fried',
             coffee: 'bi-cup-hot',
-            pizza: 'bi-circle-fill',
-            burger: 'bi-circle-fill',
+            pizza: 'bi-circle',
+            burger: 'bi-circle',
             utensils: 'bi-utensils',
             
             // Saúde e Bem-estar

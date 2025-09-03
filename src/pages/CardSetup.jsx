@@ -332,15 +332,15 @@ const CardSetup = () => {
             
             // Tecnologia
             github: 'github',
-            google: 'search',
+            google: 'google',
             code: 'code-slash',
             laptop: 'laptop',
             mobile: 'phone',
             
             // Entretenimento e Mídia
-            spotify: 'music-note-beamed',
+            spotify: 'spotify',
             netflix: 'play-circle',
-            twitch: 'broadcast',
+            twitch: 'twitch',
             podcast: 'mic',
             music: 'music-note-beamed',
             video: 'camera-video',
@@ -362,8 +362,8 @@ const CardSetup = () => {
             restaurant: 'cup-hot',
             food: 'egg-fried',
             coffee: 'cup-hot',
-            pizza: 'circle-fill',
-            burger: 'circle-fill',
+            pizza: 'circle',
+            burger: 'circle',
             utensils: 'utensils',
             
             // Saúde e Bem-estar
